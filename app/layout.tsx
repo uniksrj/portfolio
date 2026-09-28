@@ -3,9 +3,24 @@ import type { Metadata, Viewport } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Suraj Rajput — Full-Stack & Mobile Developer',
-  description: 'Portfolio of Suraj Rajput, a full-stack and mobile developer building scalable web platforms, APIs, and cross-platform experiences.',
-  generator: 'v0.app',
+  title: 'Suraj Rajput — Full-Stack & Systems Engineer | Portfolio',
+  description: 'Portfolio of Suraj Rajput, a full-stack & mobile developer specializing in high-performance web platforms, scalable APIs, and intuitive user interfaces.',
+  keywords: ['Suraj Rajput', 'Full-Stack Developer', 'Next.js', 'React', 'PHP', 'Laravel', 'TypeScript', 'Portfolio'],
+  authors: [{ name: 'Suraj Rajput', url: 'https://github.com/uniksrj' }],
+  creator: 'Suraj Rajput',
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://suraj.dev',
+    title: 'Suraj Rajput — Full-Stack & Systems Engineer',
+    description: 'Turning complex problems into scalable products, intuitive interfaces, and dependable systems.',
+    siteName: 'Suraj Rajput Portfolio',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Suraj Rajput — Full-Stack & Systems Engineer',
+    description: 'Turning complex problems into scalable products, intuitive interfaces, and dependable systems.',
+  },
   icons: {
     icon: [
       {
@@ -26,10 +41,10 @@ export const metadata: Metadata = {
 }
 
 export const viewport: Viewport = {
-  colorScheme: 'light dark',
+  colorScheme: 'dark light',
   themeColor: [
-    { media: '(prefers-color-scheme: light)', color: 'white' },
-    { media: '(prefers-color-scheme: dark)', color: 'black' },
+    { media: '(prefers-color-scheme: dark)', color: '#090a0f' },
+    { media: '(prefers-color-scheme: light)', color: '#f5f4ef' },
   ],
 }
 
@@ -39,8 +54,8 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
-      <body className="antialiased">
+    <html lang="en" className="scroll-smooth">
+      <body className="antialiased min-h-screen selection:bg-lime-400 selection:text-black">
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
